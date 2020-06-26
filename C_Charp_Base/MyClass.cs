@@ -7,7 +7,7 @@ namespace C_Charp_Base
     {
         public static void Pause()
         {
-            Console.WriteLine("Для продолжения нажмите любую кнопку");
+            Console.WriteLine("\tДля продолжения нажмите любую кнопку");
             Console.ReadKey();
         }
 
@@ -26,27 +26,35 @@ namespace C_Charp_Base
 
         public static void SwitchValue()
         {
-            Console.WriteLine("Напишите первое значение");
+            Console.Clear();
+            Console.WriteLine("\n\t\tПрограмма обмена значениями двух переменных с использованием третьей");
+            Console.Write("\n\tНапишите первое значение\t");
             var a = Console.ReadLine();
-            Console.WriteLine("Напишите второе значение");
+            Console.Write("\n\tНапишите второе значение\t");
             var b = Console.ReadLine();
             var c = a;
             a = b;
             b = c;
+            Console.Write("\tСтатус : ok\t");
             Console.WriteLine($"{a}, {b}");
         }
 
         public static void SwitchValueEasy()
         {
-            Console.WriteLine("Внимание! Этот метод подходит только для целых чисел");
-            Console.WriteLine("Напишите первое значение");
+            Console.Clear();
+            Console.WriteLine("\n\t\tПрограмма обмена значениями двух переменных без использования третьей");
+
+            Console.WriteLine("\t\tВнимание! Этот метод подходит только для целых чисел\n");
+            Console.Write("\tНапишите первое значение\t");
             var a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Напишите второе значение");
+            Console.Write("\tНапишите второе значение\t");
             var b = int.Parse(Console.ReadLine());
             a += b;
             b = a - b;
             a -= b;
-            Console.WriteLine($"{a}, {b}");
+            Console.WriteLine("\tСтатус : ok\t");
+            Console.WriteLine($"\tЗначение первой переменной стало:\t{a},\n" +
+                $"\tЗначение второй переменной стало:\t {b}");
         }
 
         public static void VectorLength()
@@ -60,7 +68,7 @@ namespace C_Charp_Base
             Console.WriteLine("Введите координату y2");
             var y2 = double.Parse(Console.ReadLine());
             var r = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
-            Console.WriteLine($"Длина вектора равняется  {r:F2}");
+            Console.WriteLine($"Длина ОТРЕЗКА равняется  {r:F2}");
         }
 
         public static void IMT()
